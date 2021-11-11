@@ -4,12 +4,6 @@ import "./widgetLg.css";
 interface Props {}
 
 export const WidgetLg: React.FC<Props> = (props: any): any => {
-  const Button = (type: any) => {
-    return (
-      <button className={"widgetLgButton" + props.type}>{props.type}</button>
-    );
-  };
-
   return (
     <div className="widgetLg">
       <h3 className="widgetLgTitle">Latest transactions</h3>
@@ -32,7 +26,9 @@ export const WidgetLg: React.FC<Props> = (props: any): any => {
           <td className="widgetLgDate">2 Jun 2021</td>
           <td className="widgetLgAmount">$122.00</td>
           <td className="widgetLgStatus">
-            <Button type="Approved" />
+            <button className={"widgetLgButton" + " Approved"}>
+              {"Approved"}
+            </button>
           </td>
         </tr>
         <tr className="widgetLgTr">
@@ -47,7 +43,9 @@ export const WidgetLg: React.FC<Props> = (props: any): any => {
           <td className="widgetLgDate">2 Jun 2021</td>
           <td className="widgetLgAmount">$122.00</td>
           <td className="widgetLgStatus">
-            <Button type="Declined" />
+            <button className={"widgetLgButton" + " Declined"}>
+              {"Declined"}
+            </button>
           </td>
         </tr>
         <tr className="widgetLgTr">
@@ -62,7 +60,9 @@ export const WidgetLg: React.FC<Props> = (props: any): any => {
           <td className="widgetLgDate">2 Jun 2021</td>
           <td className="widgetLgAmount">$122.00</td>
           <td className="widgetLgStatus">
-            <Button type="Pending" />
+            <button className={"widgetLgButton" + " Pending"}>
+              {"Pending"}
+            </button>
           </td>
         </tr>
         <tr className="widgetLgTr">
@@ -77,7 +77,9 @@ export const WidgetLg: React.FC<Props> = (props: any): any => {
           <td className="widgetLgDate">2 Jun 2021</td>
           <td className="widgetLgAmount">$122.00</td>
           <td className="widgetLgStatus">
-            <Button type="Approved" />
+            <button className={"widgetLgButton" + " Approved"}>
+              {"Approved"}
+            </button>
           </td>
         </tr>
       </table>
