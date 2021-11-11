@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 
 interface Props {}
 
-export const SideBar: React.FC<Props> = (props: any): any => {
+export const Sidebar: React.FC<Props> = (props: any): any => {
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">

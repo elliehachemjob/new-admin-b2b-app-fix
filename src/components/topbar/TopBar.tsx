@@ -6,7 +6,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 
 interface Props {}
 
-export const TopBar: React.FC<Props> = (props: any): any => {
+export const Topbar: React.FC<Props> = (props: any): any => {
   return (
     <div className="topbar">
       <div className="topbarWrapper">
