@@ -11,7 +11,7 @@ export const TopBar: React.FC<Props> = (props: any): any => {
     <div className="topbar">
       <div className="topbarWrapper">
         <div className="topLeft">
-          <span className="logo">Admin</span>
+          <span className="logo">lamaadmin</span>
         </div>
         <div className="topRight">
           <div className="topbarIconContainer">
@@ -26,7 +26,7 @@ export const TopBar: React.FC<Props> = (props: any): any => {
             <SettingsIcon />
           </div>
           <img
-            src="https://media-exp1.licdn.com/dms/image/C560BAQHgMOc88iPV6g/company-logo_200_200/0/1578911344580?e=2159024400&v=beta&t=WfQV2bAVy28VrvjaVFELLmOHYSgYjXtMte1e0cEGpJc"
+            src="https://images.pexels.com/photos/1526814/pexels-photo-1526814.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
             alt=""
             className="topAvatar"
           />
