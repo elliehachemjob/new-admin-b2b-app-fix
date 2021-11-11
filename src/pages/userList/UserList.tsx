@@ -8,17 +8,12 @@ import { Link } from "react-router-dom";
 interface Props {}
 
 export const UserList: React.FC<Props> = (props: any): any => {
-  const [data, setData] = useState<any>(userRows);
+  const [data, setData] = useState(userRows);
 
-  // const handleDelete = (id: any) => {
-  //   setData(
-  //     // @ts-ignore
-  //     data.filter((item: any) => {
-  //       // @ts-ignore
-  //       item.id !== id;
-  //     })
-  //   );
-  // };
+  const handleDelete = (id: any) => {
+    setData(data.filter((item) => item.id !== id));
+  };
+
   const columns = [
     { field: "id", headerName: "ID", width: 90 },
     {
@@ -36,30 +31,28 @@ export const UserList: React.FC<Props> = (props: any): any => {
     },
     { field: "email", headerName: "Email", width: 200 },
     {
-      field: "Status",
+      field: "status",
       headerName: "Status",
       width: 120,
     },
     {
       field: "transaction",
-      headerName: "Transaction Volume ",
+      headerName: "Transaction Volume",
       width: 160,
     },
     {
       field: "action",
-      headerName: "Action ",
+      headerName: "Action",
       width: 150,
       renderCell: (params: any) => {
         return (
           <>
-            <Link to={"/users/" + params.row.id}>
+            <Link to={"/user/" + params.row.id}>
               <button className="userListEdit">Edit</button>
             </Link>
             <DeleteOutlineIcon
               className="userListDelete"
-              // onClick={() => {
-              //   handleDelete(params.row.id);
-              // }}
+              onClick={() => handleDelete(params.row.id)}
             />
           </>
         );
@@ -71,11 +64,10 @@ export const UserList: React.FC<Props> = (props: any): any => {
     <div className="userList">
       <DataGrid
         rows={data}
+        disableSelectionOnClick
         columns={columns}
         pageSize={8}
-        rowsPerPageOptions={[5]}
         checkboxSelection
-        disableSelectionOnClick
       />
     </div>
   );

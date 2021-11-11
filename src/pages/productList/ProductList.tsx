@@ -8,17 +8,11 @@ import { Link } from "react-router-dom";
 interface Props {}
 
 export const ProductList: React.FC<Props> = (props: any): any => {
-  const [data, setData] = useState<any>(productRows);
+  const [data, setData] = useState(productRows);
 
-  // const handleDelete = (id: any) => {
-  //   setData(
-  //     // @ts-ignore
-  //     data.filter((item: any) => {
-  //       // @ts-ignore
-  //       item.id !== id;
-  //     })
-  //   );
-  // };
+  const handleDelete = (id: any) => {
+    setData(data.filter((item) => item.id !== id));
+  };
 
   const columns = [
     { field: "id", headerName: "ID", width: 90 },
@@ -37,7 +31,7 @@ export const ProductList: React.FC<Props> = (props: any): any => {
     },
     { field: "stock", headerName: "Stock", width: 200 },
     {
-      field: "Status",
+      field: "status",
       headerName: "Status",
       width: 120,
     },
@@ -48,7 +42,7 @@ export const ProductList: React.FC<Props> = (props: any): any => {
     },
     {
       field: "action",
-      headerName: "Action ",
+      headerName: "Action",
       width: 150,
       renderCell: (params: any) => {
         return (
@@ -58,9 +52,7 @@ export const ProductList: React.FC<Props> = (props: any): any => {
             </Link>
             <DeleteOutlineIcon
               className="productListDelete"
-              // onClick={() => {
-              //   handleDelete(params.row.id);
-              // }}
+              onClick={() => handleDelete(params.row.id)}
             />
           </>
         );
@@ -72,11 +64,10 @@ export const ProductList: React.FC<Props> = (props: any): any => {
     <div className="productList">
       <DataGrid
         rows={data}
+        disableSelectionOnClick
         columns={columns}
         pageSize={8}
-        rowsPerPageOptions={[5]}
         checkboxSelection
-        disableSelectionOnClick
       />
     </div>
   );

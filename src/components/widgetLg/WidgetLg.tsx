@@ -1,14 +1,12 @@
 import React from "react";
 import "./widgetLg.css";
 
-interface Props {
-  type: string;
-}
+interface Props {}
 
 export const WidgetLg: React.FC<Props> = (props: any): any => {
-  const Button = () => {
+  const Button = (type: any) => {
     return (
-      <button className={"widgetLgButton " + props.type}>{props.type}</button>
+      <button className={"widgetLgButton" + props.type}>{props.type}</button>
     );
   };
 

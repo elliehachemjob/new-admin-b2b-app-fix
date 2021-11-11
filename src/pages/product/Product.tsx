@@ -12,7 +12,7 @@ export const Product: React.FC<Props> = (props: any): any => {
     <div className="product">
       <div className="productTitleContainer">
         <h1 className="productTitle">Product</h1>
-        <Link to="newproduct">
+        <Link to="/newproduct">
           <button className="productAddButton">Create</button>
         </Link>
       </div>
@@ -28,11 +28,11 @@ export const Product: React.FC<Props> = (props: any): any => {
         <div className="productTopRight">
           <div className="productInfoTop">
             <img
-              src="https://media-exp1.licdn.com/dms/image/C560BAQHgMOc88iPV6g/company-logo_200_200/0/1578911344580?e=2159024400&v=beta&t=WfQV2bAVy28VrvjaVFELLmOHYSgYjXtMte1e0cEGpJc"
+              src="https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
               alt=""
               className="productInfoImg"
             />
-            <span className="productName">Iphone 6</span>
+            <span className="productName">Apple Airpods</span>
           </div>
           <div className="productInfoBottom">
             <div className="productInfoItem">
@@ -41,7 +41,7 @@ export const Product: React.FC<Props> = (props: any): any => {
             </div>
             <div className="productInfoItem">
               <span className="productInfoKey">sales:</span>
-              <span className="productInfoValue">123</span>
+              <span className="productInfoValue">5123</span>
             </div>
             <div className="productInfoItem">
               <span className="productInfoKey">active:</span>
@@ -58,7 +58,7 @@ export const Product: React.FC<Props> = (props: any): any => {
         <form className="productForm">
           <div className="productFormLeft">
             <label>Product Name</label>
-            <input type="text" className="Iphone 6" />
+            <input type="text" placeholder="Apple AirPod" />
             <label>In Stock</label>
             <select name="inStock" id="idStock">
               <option value="yes">Yes</option>
@@ -73,14 +73,14 @@ export const Product: React.FC<Props> = (props: any): any => {
           <div className="productFormRight">
             <div className="productUpload">
               <img
-                src="https://media-exp1.licdn.com/dms/image/C560BAQHgMOc88iPV6g/company-logo_200_200/0/1578911344580?e=2159024400&v=beta&t=WfQV2bAVy28VrvjaVFELLmOHYSgYjXtMte1e0cEGpJc"
+                src="https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
                 alt=""
                 className="productUploadImg"
               />
               <label htmlFor="file">
                 <PublishIcon />
               </label>
-              <input type="text" id="file" style={{ display: "none" }} />
+              <input type="file" id="file" style={{ display: "none" }} />
             </div>
             <button className="productButton">Update</button>
           </div>
