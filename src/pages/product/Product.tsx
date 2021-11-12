@@ -28,11 +28,11 @@ export const Product: React.FC<Props> = (props: any): any => {
         <div className="productTopRight">
           <div className="productInfoTop">
             <img
-              src="https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+              src="https://media-exp1.licdn.com/dms/image/C560BAQHgMOc88iPV6g/company-logo_200_200/0/1578911344580?e=2159024400&v=beta&t=WfQV2bAVy28VrvjaVFELLmOHYSgYjXtMte1e0cEGpJc"
               alt=""
               className="productInfoImg"
             />
-            <span className="productName">Apple Airpods</span>
+            <span className="productName">Iphone 6</span>
           </div>
           <div className="productInfoBottom">
             <div className="productInfoItem">
@@ -73,7 +73,7 @@ export const Product: React.FC<Props> = (props: any): any => {
           <div className="productFormRight">
             <div className="productUpload">
               <img
-                src="https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                src="https://media-exp1.licdn.com/dms/image/C560BAQHgMOc88iPV6g/company-logo_200_200/0/1578911344580?e=2159024400&v=beta&t=WfQV2bAVy28VrvjaVFELLmOHYSgYjXtMte1e0cEGpJc"
                 alt=""
                 className="productUploadImg"
               />

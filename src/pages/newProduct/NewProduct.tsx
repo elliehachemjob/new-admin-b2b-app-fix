@@ -14,7 +14,7 @@ export const NewProduct: React.FC<Props> = (props: any): any => {
         </div>
         <div className="addProductItem">
           <label>Name</label>
-          <input type="text" placeholder="Apple Airpods" />
+          <input type="text" placeholder="Iphone 6" />
         </div>
         <div className="addProductItem">
           <label>Stock</label>
